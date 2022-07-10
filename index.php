@@ -1,11 +1,4 @@
 <!-- BẢN QUYỀN THUỐC VỀ Quốc Huy | CODED BY QUỐC HUY -->
-<?php 
-    include('admin/includes/db_conn1.php');
-    include('admin/includes/UserInfo.php');
-
-    $sql = "SELECT * FROM `blockip`";
-    $result = mysqli_query($conn,$sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +10,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" crossorigin="anonymous">
-    <title>THCS Minh Đạm Wars Confession</title>
+    <title>THCS Minh Đạm Drama Confession</title>
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
 
@@ -52,7 +45,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="#">THCS Minh Đạm Wars Confession</a>
+        <a class="navbar-brand" href="#">THCS Minh Đạm Drama Confession</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -75,10 +68,10 @@
     <div class="container">
         <div class="card">
             <div class="card-header" style="background-color: #702222e9; color: whitesmoke">
-                <h1>THCS Minh Đạm Wars Confession</h1>
+                <h1>THCS Minh Đạm Drama Confession</h1>
             </div>
             <div class="card-body">
-                <h5 class="card-title">Chào mừng các bạn đã đến với THCS Minh Đạm Wars confession!! </h5>
+                <h5 class="card-title">Chào mừng các bạn đã đến với THCS Minh Đạm Drama confession!! </h5>
                 <p class="card-text">
                     Tại đây bản hãy gửi những cfs có tính chất biện luận! Đừng dùng những từ ngữ quá thô thiển và tục tỉu nhé! Hãy tôn trọng và lịch sự với mọi người nhé! <br>Chúc Các Bạn Một Ngày Vui Vẻ!
                     <br><br>
@@ -103,32 +96,6 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Mọi người có tâm sự gì nè</h5>
-                <?php if($result){?>
-                    <?php while($row=mysqli_fetch_assoc($result)){
-                        $ip = $row['ip'];
-
-                        $userInfoIp = UserInfo::get_ip();?>
-                        <?php if($ip == $userInfoIp){?>
-                            <script type="text/javascript"> 
-                                swal({
-                                    title: "Cảnh Báo!",
-                                    text: "Bạn đã có một số câu từ không chuẩn mực trong lời văn, bạn đã bị chặn ip trên trang web, vui lòng chờ khoảng 72h tiếp theo để được gỡ chặn! Bạn có thể truy cập và gửi báo cáo bên trang hỗ trợ để được xem xét sớm hơn! \n\nXin Cám Ơn!",
-                                    icon: "warning",
-                                    buttons: true,
-                                    buttons: ["Tới Trang Hỗ Trợ!", "Oke!"],
-                                })
-                                .then((willDelete) => {
-                                    if (!willDelete) {
-                                        window.location.href = "/contact.php";
-                                    } 
-                                });
-                            </script>
-                        <?php }?>
-
-                    <?php }?>
-                <?php }else{
-                    echo 'Có lỗi đã xảy ra!';
-                }?>
                 <?php if(isset($_REQUEST['info_form'])){ ?>
                     <?php if($_REQUEST['info_form'] == "successfully"){?>
                         <script type="text/javascript"> 
@@ -144,21 +111,12 @@
                     <?php }?>
                 <?php } ?>
                 <form action="admin/includes/form/form.php" method="POST" enctype="multipart/form-data">  
-                    <?php if($ip == $userInfoIp){ ?>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Xin mời để lại tâm sự" rows="2" required disabled></textarea>
-                            <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpeg, .jpg, .png" disabled> 
-                        </div>
-                        <button class="btn btn-primary me-2" type="submit" name="submit" disabled>Gửi nè :></button>
-                        <button class="btn btn-danger" type="reset" disabled>Xóa Thông Tin Nhập!</button>
-                    <?php }else{ ?>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Xin mời để lại tâm sự" rows="2" required></textarea>
-                            <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpeg, .jpg, .png"> 
-                        </div>
-                        <button class="btn btn-primary me-2" type="submit" name="submit">Gửi nè :></button>
-                        <button class="btn btn-danger" type="reset">Xóa Thông Tin Nhập!</button>
-                    <?php } ?>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Xin mời để lại tâm sự" rows="2" required></textarea>
+                        <input type="file" name="fileToUpload" id="fileToUpload" accept=".jpeg, .jpg, .png"> 
+                    </div>
+                    <button class="btn btn-primary me-2" type="submit" name="submit">Gửi nè :></button>
+                    <button class="btn btn-danger" type="reset">Xóa Thông Tin Nhập!</button>
                 </form>
             </div>
         </div>

@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" crossorigin="anonymous">
-    <title>THCS Minh Đạm Wars Confession</title>
+    <title>THCS Minh Đạm Drama Confession</title>
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
 
@@ -45,7 +45,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="#">THCS Minh Đạm Wars Confession</a>
+        <a class="navbar-brand" href="#">THCS Minh Đạm Drama Confession</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,7 +68,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header" style="background-color: #702222e9; color: whitesmoke">
-                <h1>THCS Minh Đạm Wars Confession - Hỗ Trợ</h1>
+                <h1>THCS Minh Đạm Drama Confession - Hỗ Trợ</h1>
             </div>
         </div>
     </div>
